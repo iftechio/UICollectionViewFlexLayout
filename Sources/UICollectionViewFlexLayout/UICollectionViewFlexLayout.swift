@@ -5,15 +5,15 @@ public let UICollectionElementKindSectionBackground = "UICollectionElementKindSe
 public let UICollectionElementKindItemBackground = "UICollectionElementKindItemBackground"
 
 open class UICollectionViewFlexLayout: UICollectionViewLayout {
-  private(set) var layoutAttributes: [IndexPath: UICollectionViewLayoutAttributes] = [:]
-  private(set) var sectionBackgroundAttributes: [Int: UICollectionViewLayoutAttributes] = [:]
-  private(set) var itemBackgroundAttributes: [IndexPath: UICollectionViewLayoutAttributes] = [:]
-  private(set) var cachedContentSize: CGSize = .zero
+  public private(set) var layoutAttributes: [IndexPath: UICollectionViewLayoutAttributes] = [:]
+  public private(set) var sectionBackgroundAttributes: [Int: UICollectionViewLayoutAttributes] = [:]
+  public private(set) var itemBackgroundAttributes: [IndexPath: UICollectionViewLayoutAttributes] = [:]
+  public private(set) var cachedContentSize: CGSize = .zero
 
-  private(set) var minYSectionAttribute: [Int: UICollectionViewLayoutAttributes] = [:]
-  private(set) var maxYSectionAttribute: [Int: UICollectionViewLayoutAttributes] = [:]
+  public private(set) var minYSectionAttribute: [Int: UICollectionViewLayoutAttributes] = [:]
+  public private(set) var maxYSectionAttribute: [Int: UICollectionViewLayoutAttributes] = [:]
 
-  private(set) var minimumItemZIndex: Int = 0
+  public private(set) var minimumItemZIndex: Int = 0
 
   override open func prepare() {
     self.prepareItemAttributes()
